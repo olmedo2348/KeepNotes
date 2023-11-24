@@ -8,6 +8,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -48,6 +49,7 @@ fun Comentarios(navControllerName: NavHostController) {
     var previousOffset = 0
 
     Column(modifier = Modifier.background(Color(0xFFF5652858))) {
+        Spacer(modifier = Modifier.padding(5.dp))
         LazyColumn(
             state = lazyListState,
             content =
@@ -59,10 +61,11 @@ fun Comentarios(navControllerName: NavHostController) {
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
                             .graphicsLayer {
-                            scrolled += lazyListState.firstVisibleItemScrollOffset -
-                                    previousOffset
-                            translationY = scrolled * 0.5f
-                            previousOffset = lazyListState.firstVisibleItemScrollOffset}
+                                scrolled += lazyListState.firstVisibleItemScrollOffset -
+                                        previousOffset
+                                translationY = scrolled * 0.5f
+                                previousOffset = lazyListState.firstVisibleItemScrollOffset
+                            }
                             .height(200.dp)
                             .fillMaxWidth()
                     )

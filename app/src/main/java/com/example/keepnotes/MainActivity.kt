@@ -88,7 +88,7 @@ class MainActivity : ComponentActivity() {
                         }
                     },
                     floatingActionButton = { FAB()},
-                    floatingActionButtonPosition = FabPosition.End
+                   // floatingActionButtonPosition = FabPosition.End
                 ) {
                     Box(
                         modifier = Modifier
@@ -194,12 +194,12 @@ private fun FAB() {
         FloatingActionButton(
             onClick = {            },
             shape = RoundedCornerShape(40.dp),
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
                 .drawBehind {
                     rotate(value) {
                         drawCircle(
                             brush = gradientBrush,
-                            style = Stroke(width = 12.dp.value)
+                            style = Stroke(width = 20.dp.value)
                         )
                     }
                 },
