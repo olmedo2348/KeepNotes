@@ -47,7 +47,7 @@ fun Comentarios(navControllerName: NavHostController) {
     var scrolled = 0f
     var previousOffset = 0
 
-    Column(modifier = Modifier.background(Color.LightGray)) {
+    Column(modifier = Modifier.background(Color(0xFFF5652858))) {
         LazyColumn(
             state = lazyListState,
             content =
