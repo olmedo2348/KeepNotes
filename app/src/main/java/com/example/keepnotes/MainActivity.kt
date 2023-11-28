@@ -118,7 +118,8 @@ fun MyTopBar() {
                 easing = LinearEasing
             ),
             repeatMode = RepeatMode.Reverse
-        )
+        ),
+        label = ""
     )
 
     TopAppBar(
@@ -170,7 +171,8 @@ private fun FAB() {
                 durationMillis = 1000,
                 easing = LinearEasing
             )
-        )
+        ),
+        label = ""
     )
     val colors = listOf(
         Color.Blue,
